@@ -11,12 +11,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# [START anthos_config_management_config_sync_quickstart_multirepo_root_repo_sync] 
+# [START anthos_config_management_config_sync_quickstart_multirepo_root_repo_sync]
 apiVersion: configsync.gke.io/v1alpha1
 kind: RepoSync
 metadata:
   # There can be at most one RepoSync object per namespace.
-  # To enforce this restriction, the object name must be repo-sync. 
+  # To enforce this restriction, the object name must be repo-sync.
   name: repo-sync
   namespace: gamestore
 spec:
@@ -24,7 +24,7 @@ spec:
   sourceFormat: unstructured
   git:
     # If you fork this repo, change the url to point to your fork
-    repo: https://github.com/GoogleCloudPlatform/anthos-config-management-samples
+    repo: https://github.com/lingxiankong/anthos-config-management-samples
     # If you move the configs to a different branch, update the branch here
     branch: main
     dir: config-sync-quickstart/multirepo/namespaces/gamestore
@@ -34,4 +34,4 @@ spec:
     # Refer to a Secret you create to hold the private key, cookiefile, or token.
     # secretRef:
     #   name: SECRET_NAME
-# [END anthos_config_management_config_sync_quickstart_multirepo_root_repo_sync] 
+# [END anthos_config_management_config_sync_quickstart_multirepo_root_repo_sync]
